@@ -65,24 +65,18 @@ namespace Targv22.Ivanov
         int number = 1;
         private  void Editor_TextChanged(object sender, TextChangedEventArgs e)
         {
-            //var entry = (Entry)sender;
             
 
 
-            //count of letters. count last change action LastOrDefault()
-            char key = e.NewTextValue?.LastOrDefault() ?? ' ';
-            if (key=='A')
-            {
-                i++;
-                label.Text=key.ToString()+": "+i.ToString();
 
-            }
-            //else
-            //{
-            //    i--;
-            //    max = entry.Text.Length;
-            //    label.Text = key.ToString() + ": " + i.ToString();
-            //};
+            string newText = e.NewTextValue.ToString();
+
+            int count = newText.Count(c => c == 'A');
+
+
+            //update count adn label text
+            i = count;
+            label.Text = "A" + i;
 
 
 
