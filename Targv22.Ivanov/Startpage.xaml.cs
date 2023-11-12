@@ -35,12 +35,19 @@ namespace Targv22.Ivanov
                 BackgroundColor = Color.Azure
 
             };
+            Button StepperSlider_btn = new Button
+            {
+                Text="StepperSlider Page",
+                BackgroundColor = Color.Azure
+
+
+            };
 
 
             StackLayout st =new StackLayout
             {
                 //all elements on the page pictures, buttons...call them from the structure above Button Ent_btn=new Button, Button Time_btn = new Button
-                Children = {Ent_btn, Time_btn, VievBox_btn, Date_Time_btn },
+                Children = {Ent_btn, Time_btn, VievBox_btn, Date_Time_btn, StepperSlider_btn },
                 BackgroundColor=Color.Beige
 
 
@@ -51,8 +58,14 @@ namespace Targv22.Ivanov
             Time_btn.Clicked += Time_btn_Clicked;
             VievBox_btn.Clicked += VievBox_btn_Clicked;
             Date_Time_btn.Clicked += Date_Time_btn_Clicked;
+            StepperSlider_btn.Clicked += StepperSlider_btn_Clicked;
 
 
+        }
+
+        private async void StepperSlider_btn_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new StepperSlider_Page());
         }
 
         //Display button in app navigation
