@@ -42,12 +42,24 @@ namespace Targv22.Ivanov
 
 
             };
+            Button Frame_btn = new Button
+            {
+                Text="Frame page",
+                BackgroundColor=Color.Azure
+
+            };
+            Button valgusfor_btn = new Button
+            {
+                Text = "Valgusfor",
+                BackgroundColor=Color.Azure
+
+            };
 
 
             StackLayout st =new StackLayout
             {
                 //all elements on the page pictures, buttons...call them from the structure above Button Ent_btn=new Button, Button Time_btn = new Button
-                Children = {Ent_btn, Time_btn, VievBox_btn, Date_Time_btn, StepperSlider_btn },
+                Children = {Ent_btn, Time_btn, VievBox_btn, Date_Time_btn, StepperSlider_btn, Frame_btn, valgusfor_btn },
                 BackgroundColor=Color.Beige
 
 
@@ -59,7 +71,22 @@ namespace Targv22.Ivanov
             VievBox_btn.Clicked += VievBox_btn_Clicked;
             Date_Time_btn.Clicked += Date_Time_btn_Clicked;
             StepperSlider_btn.Clicked += StepperSlider_btn_Clicked;
+            Frame_btn.Clicked += Frame_btn_Clicked;
+            valgusfor_btn.Clicked += Valgusfor_btn_Clicked;
 
+
+        }
+
+        private async void Valgusfor_btn_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Valgusfor_Page());
+
+
+        }
+
+        private async void Frame_btn_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Frame_page());
 
         }
 

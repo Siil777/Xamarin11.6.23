@@ -29,6 +29,7 @@ namespace Targv22.Ivanov
 
             };
             //Initialization of UI Elements
+            //active date before 5 and after 5, what we can choose
             dp = new DatePicker
             {
                 Format = "D",
@@ -40,6 +41,7 @@ namespace Targv22.Ivanov
             dp.DateSelected += Dp_DateSelected;
 
             //Initialization of UI Elements
+            //default time 12:00pm
             tp = new TimePicker
             {
                 Time = new TimeSpan(12,0,0),
@@ -71,6 +73,7 @@ namespace Targv22.Ivanov
 
         //Event Handling PropertyChanged event of the TimePicker (tp). When the time is changed, the
         //Tp_PropertyChanged method is called, updating the label text with the selected time.
+        //
 
         private void Tp_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
@@ -80,6 +83,7 @@ namespace Targv22.Ivanov
         }
         //Event Handling DateSelected event of the DatePicker (dp). When the date is selected,
         //the Dp_DateSelected method is called, updating the label text with the selected date
+        //
         private void Dp_DateSelected(object sender, DateChangedEventArgs e)
         {
 
