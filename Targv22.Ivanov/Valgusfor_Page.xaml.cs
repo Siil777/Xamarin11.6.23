@@ -19,7 +19,7 @@ namespace Targv22.Ivanov
 
         List<Color> color = new List<Color> { Color.Red, Color.Yellow, Color.Green };
 
-        List<string> circleText = new List<string>() { "Kollane", "Punane", "Roheline" };
+        List<string> circleText = new List<string>() { "Punane", "Kollane", "Roheline" };
         List<string> buttonText = new List<string>() { "Sisse", "Välja" };
         List<string> circleText1 = new List<string>() { "Stop", "Oota", "Minne" };
         
