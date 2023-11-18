@@ -54,12 +54,19 @@ namespace Targv22.Ivanov
                 BackgroundColor=Color.Azure
 
             };
+            Button pickerWeb_btn = new Button
+            {
+                Text="Internet",
+                 BackgroundColor = Color.Azure
+
+            };
+           
 
 
             StackLayout st =new StackLayout
             {
                 //all elements on the page pictures, buttons...call them from the structure above Button Ent_btn=new Button, Button Time_btn = new Button
-                Children = {Ent_btn, Time_btn, VievBox_btn, Date_Time_btn, StepperSlider_btn, Frame_btn, valgusfor_btn },
+                Children = {Ent_btn, Time_btn, VievBox_btn, Date_Time_btn, StepperSlider_btn, Frame_btn, valgusfor_btn, pickerWeb_btn },
                 BackgroundColor=Color.Beige
 
 
@@ -73,7 +80,26 @@ namespace Targv22.Ivanov
             StepperSlider_btn.Clicked += StepperSlider_btn_Clicked;
             Frame_btn.Clicked += Frame_btn_Clicked;
             valgusfor_btn.Clicked += Valgusfor_btn_Clicked;
+            pickerWeb_btn.Clicked += PickerWeb_btn_Clicked;
+            
 
+
+        }
+
+        private async void Table_View_Page_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Table_Page_View());
+        }
+
+        private async void Table_page_btn_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Table_Page());
+
+        }
+
+        private async void PickerWeb_btn_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Picker_Page());
 
         }
 
