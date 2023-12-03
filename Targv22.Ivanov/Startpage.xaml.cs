@@ -55,12 +55,7 @@ namespace Targv22.Ivanov
 
             };
          
-            Button Table_page_btn = new Button
-            {
-                Text = "Table page",
-                BackgroundColor = Color.Azure
-
-            };
+      
             Button Table_View_Page = new Button
             {
                 Text = "Table page 1",
@@ -79,7 +74,7 @@ namespace Targv22.Ivanov
             StackLayout st =new StackLayout
             {
                 //all elements on the page pictures, buttons...call them from the structure above Button Ent_btn=new Button, Button Time_btn = new Button
-                Children = {Ent_btn, Time_btn, VievBox_btn, Date_Time_btn, StepperSlider_btn, Frame_btn, valgusfor_btn, Table_page_btn, Table_View_Page, Picker_Internet },
+                Children = {Ent_btn, Time_btn, VievBox_btn, Date_Time_btn, StepperSlider_btn, Frame_btn, valgusfor_btn,  Table_View_Page, Picker_Internet },
                 BackgroundColor=Color.Beige
 
 
@@ -94,7 +89,7 @@ namespace Targv22.Ivanov
             Frame_btn.Clicked += Frame_btn_Clicked;
             valgusfor_btn.Clicked += Valgusfor_btn_Clicked;
             
-            Table_page_btn.Clicked += Table_page_btn_Clicked;
+           
             Table_View_Page.Clicked += Table_View_Page_Clicked;
             Picker_Internet.Clicked += Picker_Internet_Clicked;
 
@@ -113,11 +108,7 @@ namespace Targv22.Ivanov
             await Navigation.PushAsync(new Table_Page_View());
         }
 
-        private async void Table_page_btn_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Table_Page());
-
-        }
+       
 
         private async void Valgusfor_btn_Clicked(object sender, EventArgs e)
         {
